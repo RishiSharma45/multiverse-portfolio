@@ -1,0 +1,294 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(81, 99, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 20% 80%, rgba(139, 233, 253, 0.14), transparent 25%),
+    linear-gradient(180deg, #050816, #0b1020, #050816);
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(6, 10, 24, 0.75);
+  border-bottom: 1px solid rgba(120, 140, 255, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8be9fd;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.nav-links a:hover {
+  color: #8be9fd;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 20px 100px;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero-tag {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid rgba(139, 233, 253, 0.35);
+  border-radius: 999px;
+  color: #8be9fd;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  background: rgba(139, 233, 253, 0.08);
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #c7d2ff;
+  font-size: 18px;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 120px 80px, rgba(139,233,253,0.7), transparent),
+    radial-gradient(1.5px 1.5px at 220px 150px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 320px 50px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 520px 120px, rgba(139,233,253,0.5), transparent);
+  background-size: 600px 220px;
+  opacity: 0.5;
+}
+
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  color: #8be9fd;
+  font-size: 32px;
+}
+
+
+.glass-section {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  background: rgba(17, 24, 49, 0.55);
+  border: 1px solid rgba(120, 140, 255, 0.18);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background: rgba(21, 27, 52, 0.8);
+  border: 1px solid rgba(93, 118, 255, 0.24);
+  border-radius: 20px;
+  padding: 22px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(139, 233, 253, 0.45);
+}
+
+.project-card h2 {
+  margin-top: 0;
+  color: #8be9fd;
+}
+
+.extra-fields p {
+  margin: 8px 0;
+  color: #d7defc;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.skill-badge {
+  background: rgba(26, 35, 71, 0.85);
+  border: 1px solid rgba(120, 140, 255, 0.24);
+  padding: 10px 16px;
+  border-radius: 999px;
+}
+
+#contact p {
+  margin: 10px 0;
+  color: #d7defc;
+}
+
+.admin-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #0a1020, #121c38);
+  color: white;
+  text-align: center;
+}
+
+.admin-form {
+  max-width: 700px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #33437a;
+  background: #131b33;
+  color: white;
+  font-size: 16px;
+}
+
+.admin-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.admin-form button,
+.admin-project-card button,
+.admin-page button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #8be9fd;
+  color: #07101f;
+  font-weight: bold;
+}
+
+
+.admin-message {
+  margin-top: 15px;
+  color: #8be9fd;
+}
+
+.admin-project-list {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.admin-project-card {
+  background: #151b34;
+  border: 1px solid #2b3560;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.admin-button-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.admin-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.custom-fields-section {
+  text-align: left;
+  background: #10182f;
+  border: 1px solid #2b3560;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.custom-fields-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #8be9fd;
+}
+
+.custom-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.add-field-button {
+  margin-top: 10px;
+}
+
+.admin-extra-fields {
+  margin-top: 12px;
+  color: #d7defc;
+}
+
+.admin-section {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  background: rgba(18, 28, 56, 0.7);
+  border: 1px solid #2b3560;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.admin-page button {
+  margin-top: 10px;
+}
