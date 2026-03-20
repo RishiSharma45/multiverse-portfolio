@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  portfolio-service:
+    build:
+      context: ./services/portfolio-service
+    container_name: portfolio-service
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./services/portfolio-service/.env
+
+  auth-service:
+    build:
+      context: ./services/auth-service
+    container_name: auth-service
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./services/auth-service/.env
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - portfolio-service
+      - auth-service
