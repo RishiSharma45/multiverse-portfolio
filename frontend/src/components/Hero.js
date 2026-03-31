@@ -10,7 +10,7 @@ function Hero({ heroTitle, heroSubtitle }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <p className="hero-tag">ENTER THE MULTIVERSE</p>
+        <p className="hero-tag">ENTER THE MULTIVERSE Hello World2</p>
         <h1>{heroTitle}</h1>
         <p>{heroSubtitle}</p>
       </motion.div>
